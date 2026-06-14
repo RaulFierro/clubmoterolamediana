@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web oficial del Club Motero La Mediana, con sede en Cármenes.">
+    <title>Club Motero La Mediana | Cármenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img class="logo-header" src="logo.jpg" alt="Logotipo del Club Motero La Mediana de Cármenes (versión de cabecera).">
+            <h1>La Mediana</h1>
+        </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#club">El Club</a></li>
+                <li><a href="#rutas">Rutas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <img class="logo-main" src="logo.jpg" alt="Logotipo oficial a gran escala del Club Motero La Mediana. Muestra el escudo de Cármenes flanqueado por dos motocicletas con las montañas de León al fondo.">
+            <h2>Rodando desde Cármenes</h2>
+            <p>Pasión por las dos ruedas, sin importar el estilo. Un espacio de encuentro para moteros de La Mediana.</p>
+        </section>
+
+        <section id="club">
+            <h2>El Club</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Multiestilo</h3>
+                    <p>Tal como representa nuestro logo, en el club hay espacio tanto para maxi-trails preparadas para la aventura como para scooters. Nos une la carretera, no el tipo de motor.</p>
+                </div>
+                <div class="card">
+                    <h3>Nuestra Base</h3>
+                    <p>Operamos desde Cármenes, el enclave perfecto para iniciar cualquier trazado hacia los puertos de montaña o descender hacia los valles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="rutas">
+            <h2>Rutas por Los Argüellos</h2>
+            <div class="rutas-layout">
+                <div class="rutas-info">
+                    <p class="text-muted">Nuestra ubicación nos permite planificar rodadas espectaculares aprovechando la red de carreteras secundarias de la comarca de Los Argüellos y todo el norte de León. Priorizamos rutas donde el trazado curvo y el paisaje aporten valor al grupo.</p>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Salidas Oficiales</h3>
+                            <p>Programadas mensualmente. El ritmo siempre se adapta al grupo, asignando un guía (Road Captain) y una moto de cierre para garantizar que el pelotón circule compacto y seguro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banco-imagenes">
+                    <img src="foto1.jpg" alt="Foto 1">
+                    <img src="foto2.jpg" alt="Foto 2">
+                    <img src="foto3.jpg" alt="Foto 3">
+                    <img src="foto4.jpg" alt="Foto 4">
+                    <img src="foto5.jpg" alt="Foto 5">
+                    <img src="foto6.jpg" alt="Foto 6">
+                    <img src="foto7.jpg" alt="Foto 7">
+                    <img src="foto8.jpg" alt="Foto 8">
+                    <img src="foto9.jpg" alt="Foto 9">
+                    <img src="foto10.jpg" alt="Foto 10">
+                    <img src="foto11.jpg" alt="Foto 11">
+                    <img src="foto12.jpg" alt="Foto 12">
+                    <img src="foto13.jpg" alt="Foto 13">
+                    <img src="foto14.jpg" alt="Foto 14">
+                    <img src="foto15.jpg" alt="Foto 15">
+                    <img src="foto16.jpg" alt="Foto 16">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Ubicación</h2>
+            <div class="card">
+                <p>Para unirte a las próximas salidas, consultar horarios o conocer a los miembros del club, envíanos un correo a:</p>
+                <a href="mailto:info@clublamediana.es" class="contact-email">info@clublamediana.es</a>
+                
+                
+                <!-- Contenedor Mapa e Imagen -->
+                <div class="tarjeta-ubicacion">
+                    <!-- Columna Izquierda: Mapa de la sede en Cármenes -->
+                    <div class="ubicacion-mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.1804971812385!2d-5.572550635597752!3d42.95907711525991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd37ae087f992baf%3A0x4cad7c2ab1024236!2sC.%20Basilio%20Diez%2C%205A%2C%2024838%20C%C3%A1rmenes%2C%20Le%C3%B3n!5e0!3m2!1ses!2ses!4v1776981962775!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <!-- Columna Derecha: Imagen del Casino -->
+                    <div class="ubicacion-imagen">
+                        <img src="logo.jpg" alt="Sede del Club Motero La Mediana en el Casino de Cármenes">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Club Motero La Mediana. Cármenes, León.</p>
+    </footer>
+
+    <div id="modal-imagen" class="modal">
+        <span class="cerrar-modal">&times;</span>
+        <span class="flecha flecha-izq">&#10094;</span>
+        <img class="modal-contenido" id="img-ampliada">
+        <span class="flecha flecha-der">&#10095;</span>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal-imagen");
+        const imgAmpliada = document.getElementById("img-ampliada");
+        const btnCerrar = document.getElementsByClassName("cerrar-modal")[0];
+        const imagenes = document.querySelectorAll(".banco-imagenes img");
+        const flechaIzq = document.querySelector(".flecha-izq");
+        const flechaDer = document.querySelector(".flecha-der");
+        
+        let indiceActual = 0; // Guarda la posición de la imagen abierta
+
+        // Carga la imagen correspondiente al índice actual
+        function mostrarImagen(indice) {
+            // Si llega al final, vuelve a la primera. Si retrocede desde la primera, va a la última.
+            if (indice >= imagenes.length) indiceActual = 0;
+            if (indice < 0) indiceActual = imagenes.length - 1;
+            
+            imgAmpliada.src = imagenes[indiceActual].src;
+        }
+
+        // Al hacer clic en cualquier miniatura, se abre el modal en su índice exacto
+        imagenes.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex";
+                indiceActual = index;
+                mostrarImagen(indiceActual);
+            });
+        });
+
+        // Controles de flechas en pantalla
+        flechaIzq.addEventListener("click", function(event) {
+            event.stopPropagation(); // Evita que el clic en la flecha cierre el modal de fondo
+            indiceActual--;
+            mostrarImagen(indiceActual);
+        });
+
+        flechaDer.addEventListener("click", function(event) {
+            event.stopPropagation();
+            indiceActual++;
+            mostrarImagen(indiceActual);
+        });
+
+        // Cerrar modal al pulsar la X o hacer clic en el fondo oscuro
+        btnCerrar.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Controles con el teclado (Flechas y Escape)
+        document.addEventListener("keydown", function(event) {
+            if (modal.style.display === "flex") {
+                if (event.key === "ArrowLeft") {
+                    indiceActual--;
+                    mostrarImagen(indiceActual);
+                } else if (event.key === "ArrowRight") {
+                    indiceActual++;
+                    mostrarImagen(indiceActual);
+                } else if (event.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

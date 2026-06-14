@@ -1,0 +1,398 @@
+:root {
+    --primary-color: #0d47a1;
+    --primary-light: #1565c0;
+    --secondary-color: #b71c1c;
+    --bg-page: #f4f6f8;
+    --surface-card: #ffffff;
+    --text-main: #212121;
+    --text-muted: #546e7a;
+    --font-main: system-ui, -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Se elimina el border-bottom para limpiar el diseño y se optimiza la sombra */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-header {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Espaciado reducido para compensar el relleno de los botones */
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    background-color: #98d1f5; /* Fondo azul muy claro en estado de reposo */
+    border-radius: 25px; /* Bordes redondeados en forma de píldora */
+    transition: all 0.3s ease; /* Unifica la animación de color, posición y sombra */
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: var(--primary-color); /* El botón se llena del azul corporativo */
+    color: #ffffff; /* El texto pasa a blanco para mantener el contraste */
+    transform: translateY(-3px); /* Eleva el botón 3 píxeles hacia arriba */
+    box-shadow: 0 6px 12px rgba(13, 71, 161, 0.25); /* Proyecta una sombra del color primario */
+}
+
+main {
+    padding: 0;
+}
+
+section {
+    padding: 4rem 5%;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 5%;
+    
+    /* Imagen completamente limpia, sin capas de degradados oscuros */
+    background-image: url('pai.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.logo-main {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95), -1px -1px 0 rgba(0, 0, 0, 0.95);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e3f2fd;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95), -1px -1px 0 rgba(0, 0, 0, 0.95);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--surface-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-light);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+.text-muted {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.contact-email {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(13, 71, 161, 0.2); /* Sombra sutil del color primario */
+}
+
+.contact-email:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .logo-main {
+        width: 200px;
+        height: 200px;
+    }
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- SECCIÓN RUTAS: TEXTO E IMÁGENES LADO A LADO --- */
+.rutas-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.rutas-info {
+    flex: 1; /* Ocupa el 50% del ancho */
+}
+
+/* Contenedor del banco de 50 imágenes */
+.banco-imagenes {
+    flex: 1; /* Ocupa el otro 50% del ancho */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Crea columnas para las miniaturas */
+    gap: 8px;
+    max-height: 400px; /* Altura máxima para no hacer la página infinita */
+    overflow-y: auto; /* Añade scroll vertical solo a las fotos */
+    padding-right: 10px;
+}
+
+.banco-imagenes img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover; /* Recorta la foto para que sea un cuadrado perfecto */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Adaptación a móviles: Si la pantalla es pequeña, se pone una debajo de otra obligatoriamente */
+@media (max-width: 768px) {
+    .rutas-layout {
+        flex-direction: column;
+    }
+    .banco-imagenes {
+        max-height: 300px;
+    }
+}
+
+/* --- MODAL PARA IMÁGENES AMPLIADAS --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 9999; /* Se asegura de estar por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-contenido {
+    max-width: 90%;
+    max-height: 85vh; /* Ocupa como máximo el 85% del alto de la pantalla */
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    object-fit: contain; /* Evita que la foto se deforme */
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* Cambia el cursor del ratón en las miniaturas a una lupa */
+.banco-imagenes img {
+    cursor: zoom-in;
+}
+
+/* Controles de navegación del modal (Flechas) */
+.flecha {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.3s;
+    user-select: none; /* Evita que el texto de la flecha se seleccione por error */
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.flecha-izq {
+    left: 20px;
+}
+
+.flecha-der {
+    right: 20px;
+}
+
+.flecha:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Animación para las tarjetas de información */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta 5 píxeles */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animación para las miniaturas del banco de imágenes */
+.banco-imagenes img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.banco-imagenes img:hover {
+    filter: brightness(0.8); /* Oscurece ligeramente la miniatura al pasar el ratón */
+    transform: scale(1.03); /* Hace un pequeño zoom interno */
+}
+
+/* --- SECCIÓN CONTACTO: MAPA E IMAGEN --- */
+.tarjeta-ubicacion {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.ubicacion-mapa {
+    flex: 1; /* Ocupa el 50% del contenedor */
+}
+
+.ubicacion-mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.ubicacion-imagen {
+    flex: 1; /* Ocupa el otro 50% del contenedor */
+    display: flex;
+    justify-content: center;
+}
+
+/* Regla específica para reducir el tamaño del logo bajo el mapa */
+.ubicacion-imagen img {
+    max-width: 250px; /* Este es el valor que debes modificar si la quieres más grande o más pequeña */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Adaptación a móviles para que el mapa quede arriba y la imagen abajo */
+@media (max-width: 768px) {
+    .tarjeta-ubicacion {
+        flex-direction: column;
+    }
+    .ubicacion-mapa iframe {
+        height: 250px;
+    }
+}
